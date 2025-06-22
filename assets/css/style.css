@@ -5,16 +5,18 @@
 }
 
 body {
-  font-family: "Arial", sans-serif;
-  color: white;
-  min-height: 100vh;
+  font-family: "Arial", "Helvetica", sans-serif;
+  line-height: 1.6;
+  color: #333;
 }
+
+/* Navigation Styles */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.9);
   backdrop-filter: blur(10px);
   position: fixed;
   top: 0;
@@ -28,6 +30,12 @@ body {
   align-items: center;
 }
 
+.logo-container .logo {
+  height: 40px;
+  width: auto;
+  max-width: 150px;
+}
+
 .nav-links {
   display: flex;
   list-style: none;
@@ -35,7 +43,7 @@ body {
 }
 
 .nav-links a {
-  color: white;
+  color: white !important;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
@@ -43,7 +51,7 @@ body {
 }
 
 .nav-links a:hover {
-  color: #ff6b35;
+  color: #ff6b35 !important;
 }
 
 .nav-icons {
@@ -54,13 +62,15 @@ body {
 .icon {
   font-size: 1.2rem;
   cursor: pointer;
+  color: white;
   transition: transform 0.3s ease;
 }
 
 .icon:hover {
   transform: scale(1.1);
 }
-.landing-container {
+
+.hero-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -70,27 +80,53 @@ body {
   padding: 2rem;
   margin-top: 80px;
   background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+  color: white;
 }
 
 .main-header {
   margin-bottom: 2rem;
 }
+
+.main-logo {
+  height: 120px;
+  width: auto;
+  max-width: 300px;
+  filter: drop-shadow(0 0 30px rgba(255, 107, 53, 0.6));
+  transition: all 0.3s ease;
+}
+
+.main-logo:hover {
+  transform: scale(1.1);
+}
+
+/* Main Content */
 .main-content {
   max-width: 800px;
   margin: 2rem 0;
 }
 
+.main-content h1 {
+  font-size: 3.5rem !important;
+  font-weight: bold !important;
+  background: linear-gradient(45deg, #ff6b35, #f7931e, #ffcc02);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem !important;
+  color: #ffcc02 !important; /* Fallback cho trình duyệt không hỗ trợ gradient */
+}
+
 .subtitle {
-  font-size: 1.5rem;
-  color: #cccccc;
-  margin-bottom: 2rem;
+  font-size: 1.5rem !important;
+  color: #cccccc !important;
+  margin-bottom: 2rem !important;
   font-weight: 300;
 }
 
 .cta-button {
   display: inline-block;
   background: linear-gradient(45deg, #ff6b35, #f7931e);
-  color: white;
+  color: white !important;
   padding: 1rem 2.5rem;
   text-decoration: none;
   border-radius: 50px;
@@ -100,11 +136,14 @@ body {
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
 }
+
 .cta-button:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(255, 107, 53, 0.6);
-  background: linear-gradient(45deg, #f7931e, #ff6b35);
+  color: white !important;
 }
+
+/* News Section */
 .news-section {
   background: #f5f5f5;
   padding: 80px 0;
@@ -125,12 +164,13 @@ body {
 }
 
 .news-title {
-  font-size: 3rem;
-  font-weight: 900;
-  color: #000;
+  font-size: 3rem !important;
+  font-weight: 900 !important;
+  color: #000 !important;
   line-height: 1.1;
   position: relative;
 }
+
 .news-title::after {
   content: "";
   position: absolute;
@@ -140,8 +180,9 @@ body {
   height: 4px;
   background: #ffc107;
 }
+
 .view-all {
-  color: #ff6b35;
+  color: #ff6b35 !important;
   text-decoration: none;
   font-weight: bold;
   font-size: 1.1rem;
@@ -149,7 +190,7 @@ body {
 }
 
 .view-all:hover {
-  color: #f7931e;
+  color: #f7931e !important;
 }
 
 .news-grid {
@@ -200,13 +241,13 @@ body {
 }
 
 .news-date {
-  color: #666;
+  color: #666 !important;
   font-size: 0.9rem;
 }
 
 .news-category {
   background: #ff6b35;
-  color: white;
+  color: white !important;
   padding: 0.2rem 0.8rem;
   border-radius: 15px;
   font-size: 0.8rem;
@@ -214,21 +255,22 @@ body {
 }
 
 .news-headline {
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: #333;
+  font-size: 1.1rem !important;
+  font-weight: bold !important;
+  color: #333 !important;
   line-height: 1.4;
   margin: 0;
 }
 
+/* Footer */
 .main-footer {
-  background: #000;
+  background: #888;
   text-align: center;
   padding: 2rem 0;
 }
 
 .main-footer p {
-  color: #888;
+  color: #888 !important;
   font-size: 0.9rem;
 }
 
@@ -246,14 +288,14 @@ body {
   }
 
   .main-content h1 {
-    font-size: 2.5rem;
+    font-size: 2.5rem !important;
   }
 
   .subtitle {
-    font-size: 1.2rem;
+    font-size: 1.2rem !important;
   }
 
-  .landing-container {
+  .hero-section {
     padding: 1rem;
     margin-top: 120px;
   }
@@ -263,7 +305,7 @@ body {
   }
 
   .news-title {
-    font-size: 2rem;
+    font-size: 2rem !important;
   }
 
   .news-header {
@@ -284,7 +326,7 @@ body {
 
 @media (max-width: 480px) {
   .main-content h1 {
-    font-size: 2rem;
+    font-size: 2rem !important;
   }
 
   .nav-links {
@@ -309,6 +351,22 @@ body {
   }
 }
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.main-content h1,
+.subtitle,
+.cta-button {
+  animation: fadeInUp 0.8s ease-out;
+}
 
 .subtitle {
   animation-delay: 0.2s;
@@ -333,3 +391,11 @@ body {
 .news-card:nth-child(3) {
   animation-delay: 0.2s;
 }
+project/
+├── index.html
+└── assets/
+    └── img/
+        ├── ff1.jpg
+        ├── ff2.jpg
+        └── ff3.jpg
+        
