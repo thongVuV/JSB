@@ -1,277 +1,284 @@
+/* Reset CSS mặc định cho toàn trang */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: 0; /* Xóa khoảng cách ngoài mặc định */
+  padding: 0; /* Xóa khoảng cách trong mặc định */
+  box-sizing: border-box; /* Tính cả border và padding vào width và height */
 }
 
+/* Thiết lập cơ bản cho body */
 body {
-  font-family: "Arial", "Helvetica", sans-serif;
-  line-height: 1.6;
-  color: #333;
+  font-family: "Arial", "Helvetica", sans-serif; /* Phông chữ chính */
+  line-height: 1.6; /* Chiều cao dòng giúp dễ đọc hơn */
+  color: #333; /* Màu chữ mặc định */
 }
 
-/* Navigation Styles */
+/* ==== NAVIGATION BAR ==== */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background: rgba(0, 0, 0, 0.9);
-  backdrop-filter: blur(10px);
-  position: fixed;
+  display: flex; /* Sắp xếp các phần tử con theo hàng ngang */
+  justify-content: space-between; /* Canh trái phải giữa các phần tử */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  padding: 1rem 2rem; /* Khoảng cách bên trong thanh navbar */
+  background: rgba(0, 0, 0, 0.9); /* Nền màu đen trong suốt */
+  backdrop-filter: blur(10px); /* Làm mờ nền phía sau */
+  position: fixed; /* Cố định trên cùng khi cuộn trang */
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 1000; /* Ưu tiên hiển thị trên các phần khác */
+  display: flex;
+  align-items: center;
 }
 
 .logo-container {
-  display: flex;
-  align-items: center;
+  display: flex; /* Canh logo theo hàng ngang */
+  align-items: center; /* Căn giữa theo chiều dọc */
 }
 
 .logo-container .logo {
-  height: 40px;
-  width: auto;
-  max-width: 150px;
+  height: 40px; /* Chiều cao logo */
+  width: auto; /* Tự động tính chiều rộng */
+  max-width: 150px; /* Giới hạn tối đa chiều rộng */
 }
 
 .nav-links {
-  display: flex;
-  list-style: none;
-  gap: 2rem;
+  display: flex; /* Hiển thị các liên kết theo hàng ngang */
+  list-style: none; /* Bỏ chấm tròn trước các mục */
+  gap: 2rem; /* Khoảng cách giữa các mục */
 }
 
 .nav-links a {
-  color: white !important;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
-  text-transform: lowercase;
+  color: white !important; /* Màu chữ trắng */
+  text-decoration: none; /* Bỏ gạch chân */
+  font-weight: 500; /* Độ đậm chữ */
+  transition: color 0.3s ease; /* Hiệu ứng đổi màu */
+  text-transform: lowercase; /* Viết thường toàn bộ */
 }
 
 .nav-links a:hover {
-  color: #ff6b35 !important;
+  color: #ff6b35 !important; /* Đổi màu khi hover */
 }
 
 .nav-icons {
+  display: flex; /* Hiển thị icon theo hàng ngang */
+  gap: 1rem; /* Khoảng cách giữa các icon */
   display: flex;
-  gap: 1rem;
+  margin-left: 50px; /* Đẩy toàn bộ icon sang bên phải */
 }
 
 .icon {
-  font-size: 1.2rem;
-  cursor: pointer;
-  color: white;
-  transition: transform 0.3s ease;
+  font-size: 1.2rem; /* Kích thước icon */
+  cursor: pointer; /* Con trỏ chuột khi hover */
+  color: white; /* Màu icon */
+  transition: transform 0.3s ease; /* Hiệu ứng phóng to */
 }
 
 .icon:hover {
-  transform: scale(1.1);
+  transform: scale(1.1); /* Phóng to khi hover */
 }
 
+/* ==== PHẦN HERO ==== */
 .hero-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  text-align: center;
-  padding: 2rem;
-  margin-top: 80px;
-  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
-  color: white;
+  display: flex; /* Sắp xếp các phần tử dọc */
+  flex-direction: column; /* Hiển thị theo cột */
+  justify-content: center; /* Canh giữa theo chiều dọc */
+  align-items: center; /* Căn giữa theo chiều ngang */
+  min-height: 100vh; /* Chiều cao tối thiểu bằng chiều cao màn hình */
+  text-align: center; /* Căn giữa nội dung */
+  padding: 2rem; /* Khoảng cách bên trong */
+  margin-top: 80px; /* Tránh đè lên navbar */
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%); /* Nền gradient */
+  color: white; /* Màu chữ trắng */
 }
 
 .main-header {
-  margin-bottom: 2rem;
+  margin-bottom: 2rem; /* Khoảng cách phía dưới tiêu đề */
 }
 
 .main-logo {
-  height: 120px;
-  width: auto;
-  max-width: 300px;
-  filter: drop-shadow(0 0 30px rgba(255, 107, 53, 0.6));
-  transition: all 0.3s ease;
+  height: 120px; /* Chiều cao logo */
+  width: auto; /* Chiều rộng tự động */
+  max-width: 300px; /* Giới hạn chiều rộng tối đa */
+  filter: drop-shadow(0 0 30px rgba(255, 107, 53, 0.6)); /* Đổ bóng logo */
+  transition: all 0.3s ease; /* Hiệu ứng mượt khi thay đổi */
 }
 
 .main-logo:hover {
-  transform: scale(1.1);
+  transform: scale(1.1); /* Phóng to logo khi hover */
 }
 
-/* Main Content */
+/* ==== PHẦN NỘI DUNG CHÍNH ==== */
 .main-content {
-  max-width: 800px;
-  margin: 2rem 0;
+  max-width: 800px; /* Giới hạn chiều rộng nội dung */
+  margin: 2rem 0; /* Khoảng cách trên và dưới */
 }
 
 .main-content h1 {
-  font-size: 3.5rem !important;
-  font-weight: bold !important;
-  background: linear-gradient(45deg, #ff6b35, #f7931e, #ffcc02);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  margin-bottom: 1rem !important;
-  color: #ffcc02 !important; /* Fallback cho trình duyệt không hỗ trợ gradient */
+  font-size: 3.5rem !important; /* Cỡ chữ lớn */
+  font-weight: bold !important; /* Chữ đậm */
+  background: linear-gradient(45deg, #ff6b35, #f7931e, #ffcc02); /* Gradient màu chữ */
+  -webkit-background-clip: text; /* Hiển thị gradient trong chữ */
+  -webkit-text-fill-color: transparent; /* Làm chữ trong suốt để hiện gradient */
+  background-clip: text; /* Hỗ trợ thêm cho các trình duyệt khác */
+  margin-bottom: 1rem !important; /* Khoảng cách dưới tiêu đề */
+  color: #ffcc02 !important; /* Màu chữ fallback khi không hỗ trợ gradient */
 }
 
 .subtitle {
-  font-size: 1.5rem !important;
-  color: #cccccc !important;
-  margin-bottom: 2rem !important;
-  font-weight: 300;
+  font-size: 1.5rem !important; /* Cỡ chữ phụ đề */
+  color: #cccccc !important; /* Màu chữ phụ đề */
+  margin-bottom: 2rem !important; /* Khoảng cách dưới phụ đề */
+  font-weight: 300; /* Độ đậm nhẹ của chữ */
 }
 
 .cta-button {
-  display: inline-block;
-  background: linear-gradient(45deg, #ff6b35, #f7931e);
-  color: white !important;
-  padding: 1rem 2.5rem;
-  text-decoration: none;
-  border-radius: 50px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+  display: inline-block; /* Hiển thị dạng khối nội tuyến */
+  background: linear-gradient(45deg, #ff6b35, #f7931e); /* Màu nền nút */
+  color: white !important; /* Màu chữ trắng */
+  padding: 1rem 2.5rem; /* Kích thước đệm bên trong nút */
+  text-decoration: none; /* Bỏ gạch chân */
+  border-radius: 50px; /* Bo tròn viền */
+  font-size: 1.2rem; /* Kích thước chữ */
+  font-weight: bold; /* Chữ đậm */
+  text-transform: uppercase; /* Viết hoa toàn bộ */
+  transition: all 0.3s ease; /* Hiệu ứng mượt khi thay đổi */
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4); /* Đổ bóng nút */
 }
 
 .cta-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.6);
-  color: white !important;
+  transform: translateY(-2px); /* Nổi lên khi hover */
+  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.6); /* Bóng nổi hơn */
+  color: white !important; /* Giữ màu chữ trắng */
 }
 
-/* News Section */
+/* ==== PHẦN TIN TỨC ==== */
 .news-section {
-  background: #f5f5f5;
-  padding: 80px 0;
-  color: #333;
+  background: #f5f5f5; /* Màu nền xám nhạt */
+  padding: 80px 0; /* Khoảng cách trên dưới */
+  color: #333; /* Màu chữ */
 }
 
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
+  max-width: 1200px; /* Giới hạn chiều rộng */
+  margin: 0 auto; /* Căn giữa */
+  padding: 0 2rem; /* Khoảng cách bên trái phải */
 }
 
 .news-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 3rem;
+  display: flex; /* Hiển thị các phần tử theo hàng ngang */
+  justify-content: space-between; /* Căn giữa các thành phần */
+  align-items: flex-start; /* Căn trên cùng */
+  margin-bottom: 3rem; /* Khoảng cách dưới */
 }
 
 .news-title {
-  font-size: 3rem !important;
-  font-weight: 900 !important;
-  color: #000 !important;
-  line-height: 1.1;
-  position: relative;
+  font-size: 3rem !important; /* Kích thước tiêu đề */
+  font-weight: 900 !important; /* Chữ đậm */
+  color: #000 !important; /* Màu đen */
+  line-height: 1.1; /* Chiều cao dòng */
+  position: relative; /* Để thêm gạch chân động */
 }
 
 .news-title::after {
-  content: "";
+  content: ""; /* Thêm phần tử ảo để làm gạch chân */
   position: absolute;
-  bottom: -10px;
+  bottom: -10px; /* Cách dưới tiêu đề */
   left: 0;
   width: 120px;
   height: 4px;
-  background: #ffc107;
+  background: #ffc107; /* Gạch chân màu vàng */
 }
 
 .view-all {
-  color: #ff6b35 !important;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.1rem;
-  transition: color 0.3s ease;
+  color: #ff6b35 !important; /* Màu cam */
+  text-decoration: none; /* Bỏ gạch chân */
+  font-weight: bold; /* Chữ đậm */
+  font-size: 1.1rem; /* Cỡ chữ */
+  transition: color 0.3s ease; /* Hiệu ứng màu khi hover */
 }
 
 .view-all:hover {
-  color: #f7931e !important;
+  color: #f7931e !important; /* Đổi sang màu cam nhạt khi hover */
 }
 
 .news-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
+  display: grid; /* Hiển thị dạng lưới */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Cột tự co dãn */
+  gap: 2rem; /* Khoảng cách giữa các mục */
 }
 
 .news-card {
-  background: white;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
+  background: white; /* Màu nền trắng */
+  border-radius: 15px; /* Bo góc */
+  overflow: hidden; /* Ẩn tràn */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng chuyển động */
+  cursor: pointer; /* Con trỏ dạng tay */
 }
 
 .news-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px); /* Nổi lên khi hover */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); /* Tăng độ bóng */
 }
 
 .news-image {
-  width: 100%;
-  height: 200px;
-  overflow: hidden;
+  width: 100%; /* Chiếm toàn bộ chiều rộng */
+  height: 200px; /* Chiều cao hình ảnh */
+  overflow: hidden; /* Ẩn tràn hình ảnh */
 }
 
 .news-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
+  object-fit: cover; /* Hình ảnh không bị méo */
+  transition: transform 0.3s ease; /* Hiệu ứng phóng to */
 }
 
 .news-card:hover .news-image img {
-  transform: scale(1.05);
+  transform: scale(1.05); /* Phóng to khi hover */
 }
 
 .news-content {
-  padding: 1.5rem;
+  padding: 1.5rem; /* Khoảng cách nội dung bên trong */
 }
 
 .news-meta {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 1rem;
+  display: flex; /* Hiển thị theo hàng ngang */
+  gap: 1rem; /* Khoảng cách giữa các mục */
+  margin-bottom: 1rem; /* Khoảng cách dưới */
 }
 
 .news-date {
-  color: #666 !important;
-  font-size: 0.9rem;
+  color: #666 !important; /* Màu xám nhạt */
+  font-size: 0.9rem; /* Cỡ chữ nhỏ */
 }
 
 .news-category {
-  background: #ff6b35;
-  color: white !important;
-  padding: 0.2rem 0.8rem;
-  border-radius: 15px;
-  font-size: 0.8rem;
-  font-weight: bold;
+  background: #ff6b35; /* Màu nền cam */
+  color: white !important; /* Màu chữ trắng */
+  padding: 0.2rem 0.8rem; /* Kích thước vùng nền */
+  border-radius: 15px; /* Bo góc */
+  font-size: 0.8rem; /* Cỡ chữ nhỏ */
+  font-weight: bold; /* Chữ đậm */
 }
 
 .news-headline {
-  font-size: 1.1rem !important;
-  font-weight: bold !important;
-  color: #333 !important;
-  line-height: 1.4;
-  margin: 0;
+  font-size: 1.1rem !important; /* Cỡ chữ */
+  font-weight: bold !important; /* Chữ đậm */
+  color: #333 !important; /* Màu chữ */
+  line-height: 1.4; /* Chiều cao dòng */
+  margin: 0; /* Bỏ khoảng cách */
 }
 
-/* Footer */
+/* ==== FOOTER ==== */
 .main-footer {
-  background: #888;
-  text-align: center;
-  padding: 2rem 0;
+  background: #888; /* Màu nền xám */
+  text-align: center; /* Căn giữa nội dung */
+  padding: 2rem 0; /* Khoảng cách trên dưới */
 }
 
 .main-footer p {
-  color: #888 !important;
-  font-size: 0.9rem;
+  color: #888 !important; /* Màu chữ giống màu nền */
+  font-size: 0.9rem; /* Cỡ chữ nhỏ */
 }
 
 @media (max-width: 768px) {
@@ -438,3 +445,74 @@ project/
 .account-dropdown:hover .account-menu {
   display: block;
 }
+/* Taskbar dọc ẩn mặc định */
+.dropdown .dropdown-taskbar {
+  display: none;
+  position: absolute;
+  background-color: #111;
+  padding: 10px 0;
+  list-style: none;
+  top: 100%;
+  left: 0;
+  min-width: 140px;
+  border-radius: 5px;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Hiện ra khi hover */
+.dropdown:hover .dropdown-taskbar {
+  display: block;
+}
+
+/* Style cho từng mục */
+.dropdown-taskbar li a {
+  display: block; /* Hiển thị dạng khối để chiếm toàn bộ chiều ngang */
+  padding: 10px 15px; /* Tạo khoảng cách giữa nội dung và viền */
+  color: #fff; /* Màu chữ là trắng */
+  text-decoration: none; /* Bỏ gạch chân mặc định của liên kết */
+}
+
+.dropdown-taskbar li a:hover {
+  background-color: #333; /* Khi rê chuột, nền chuyển sang màu xám đậm */
+  color: orange; /* Màu chữ chuyển thành màu cam */
+}
+
+/* Thẻ cha dropdown chứa menu con */
+.dropdown {
+  position: relative; /* Giúp dropdown-taskbar căn chỉnh đúng vị trí so với dropdown */
+}
+
+/* Menu con hiển thị bên dưới mục chính */
+.dropdown-taskbar {
+  display: none; /* Mặc định ẩn menu con */
+  position: absolute; /* Định vị tuyệt đối so với phần tử cha có position: relative */
+  top: 100%; /* Hiển thị ngay bên dưới mục cha */
+  left: 0; /* Canh trái theo phần tử cha */
+  background-color: #111; /* Nền màu đen đậm */
+  padding: 10px 0; /* Tạo khoảng cách dọc cho menu */
+  list-style: none; /* Bỏ dấu chấm đầu dòng của danh sách */
+  border-radius: 5px; /* Bo tròn góc menu */
+  z-index: 1000; /* Hiển thị lớp trên cùng */
+  min-width: 150px; /* Đặt chiều rộng tối thiểu */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Đổ bóng menu */
+}
+
+/* Khi rê chuột vào phần tử cha, hiển thị menu con */
+.dropdown:hover .dropdown-taskbar {
+  display: block; /* Khi rê chuột vào mục chính, menu con sẽ hiện ra */
+}
+
+/* Lặp lại style cho từng mục trong dropdown */
+.dropdown-taskbar li a {
+  display: block; /* Hiển thị dạng khối */
+  padding: 10px 15px; /* Khoảng cách bên trong */
+  color: #fff; /* Màu trắng */
+  text-decoration: none; /* Không gạch chân */
+}
+
+.dropdown-taskbar li a:hover {
+  background-color: #333; /* Nền đậm khi hover */
+  color: orange; /* Màu cam khi hover */
+}
+

@@ -1,40 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>fifai - sinh tồn ko em</title>
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>fifai</title>
+  <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 <body>
+
+  <!-- Phần thanh taskbar -->
   <nav class="navbar">
     <div class="logo-container">
-      <img src="fifai.png" alt="Free Fire Logo">
+      <img src="./assets/img/fifai.png" alt="Free Fire Logo" style="width: 150px; height: auto;" />
     </div>
+
     <ul class="nav-links">
-      <li><a href="#">giới thiệu ▾</a></li>
+      <li class="dropdown">
+        <a href="#">giới thiệu ▾</a>
+        <ul class="dropdown-taskbar">
+          <li><a href="#">Nhân vật</a></li>
+          <li><a href="#">Trợ thủ</a></li>
+          <li><a href="#">Bản đồ</a></li>
+          <li><a href="#">Vũ khí</a></li>
+        </ul>
+      </li>
       <li><a href="#news">tin tức</a></li>
       <li><a href="#">cộng đồng ↗</a></li>
-      <li><a href="#">eSPORTS ↗</a></li>
-      <li><a href="#">thêm về chúng tôi ▾</a></li>
+      <li><a href="esport.html">eSPORTS ↗</a></li>
+      <li class="dropdown">
+        <a href="#">theo dõi chúng tôi ▾</a>
+        <ul class="dropdown-taskbar">
+          <li><a href="https://www.facebook.com/FreeFireUSOfficial/" target="_blank">Facebook</a></li>
+          <li><a href="https://www.youtube.com/channel/UC7qTEluetD2pDB7lUBBlKuw" target="_blank">YouTube</a></li>
+          <li><a href="https://www.tiktok.com/tag/freefire" target="_blank">TikTok</a></li>
+        </ul>
+      </li>
     </ul>
-    <div class="nav-icons">
+
+    <div class="nav-icons" style="margin-left: auto;">
       <span class="icon">🛒</span>
       <span class="icon">🌐</span>
-  <div class="account-dropdown">
-      <span class="icon account-icon">👤</span>
-    <div class="account-menu">
-      <a href="dang nhap.html">Đăng nhập</a>
-      <a href="dangky.html">Đăng ký</a>
-    </div>
-  </div>
-</div>
 
+      <div class="account-dropdown">
+        <span class="icon account-icon">👤</span>
+        <div class="account-menu">
+          <a href="dang nhap.html">Đăng nhập</a>
+          <a href="dangky.html">Đăng ký</a>
+        </div>
+      </div>
+    </div>
   </nav>
 
+  <!-- Phần hero chính -->
   <div class="hero-section">
     <header class="main-header">
-      <img src="fifai.png">
+      <img src="assets/img/fifai.png" style="width: 150px; height: auto;" />
     </header>
 
     <main class="main-content">
@@ -44,29 +64,31 @@
     </main>
   </div>
 
+  <!-- Phần tin tức -->
   <section id="news" class="news-section">
     <div class="container">
       <div class="news-header">
-        <h2 class="news-title">tin tức<br>mới nhất</h2>
+        <h2 class="news-title">tin tức<br />mới nhất</h2>
         <a href="#" class="view-all">xem thêm ▶</a>
       </div>
-      
+
       <div class="news-grid">
         <article class="news-card">
           <div class="news-image">
-            <img src="assets/img/news1.jpg"/>
+            <img src="assets/img/ff1.jpeg" />
           </div>
           <div class="news-content">
             <div class="news-meta">
               <span class="news-date">28/06/2025</span>
               <span class="news-category">sự kiện</span>
             </div>
-            <h3 class="news-headline">Sinh Nhật fifai Lần Thứ 8
+            <h3 class="news-headline">Sinh Nhật fifai Lần Thứ 8</h3>
+          </div>
         </article>
 
         <article class="news-card">
           <div class="news-image">
-            <img src="assets/img/news2.jpg"/>
+            <img src="assets/img/ff2.png" />
           </div>
           <div class="news-content">
             <div class="news-meta">
@@ -79,7 +101,7 @@
 
         <article class="news-card">
           <div class="news-image">
-            <img src="assets/img/news3.jpg"/> 
+            <img src="assets/img/ff3.jpg" />
           </div>
           <div class="news-content">
             <div class="news-meta">
@@ -93,8 +115,10 @@
     </div>
   </section>
 
+  <!-- Footer -->
   <footer class="main-footer">
     <p>&copy; fifai. @2025.</p>
   </footer>
+
 </body>
 </html>
