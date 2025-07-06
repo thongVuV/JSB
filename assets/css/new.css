@@ -1,0 +1,143 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  color: #000;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: #111;
+  padding: 10px 20px;
+  color: white;
+  flex-wrap: wrap;
+}
+
+.logo-container img {
+  height: 50px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin-left: 20px;
+  gap: 15px;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  display: block;
+}
+
+.nav-links .dropdown-taskbar {
+  display: none;
+  position: absolute;
+  background-color: black;
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+  z-index: 999;
+  min-width: 160px;
+}
+
+.nav-links li:hover .dropdown-taskbar {
+  display: block;
+}
+
+.nav-icons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-left: auto;
+}
+
+.account-dropdown {
+  position: relative;
+}
+
+.account-menu {
+  display: none;
+  position: absolute;
+  background: black;
+  right: 0;
+  top: 120%;
+  padding: 10px;
+  border: 1px solid #333;
+}
+
+.account-dropdown:hover .account-menu {
+  display: block;
+}
+
+.account-menu a {
+  display: block;
+  padding: 5px 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.news-section {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.news-title {
+  font-size: 2em;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.news-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.news-card {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 360px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+}
+
+.news-img img {
+  width: 100%;
+  display: block;
+}
+
+.news-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+  font-size: 14px;
+  color: #777;
+}
+
+.news-headline {
+  font-size: 18px;
+  padding: 0 15px 15px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #111;
+  color: white;
+  margin-top: 50px;
+}

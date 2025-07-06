@@ -1,0 +1,135 @@
+/* TASKBAR CƠ BẢN */
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: #111;
+  padding: 10px 20px;
+  color: white;
+  flex-wrap: wrap;
+}
+
+.logo-container img {
+  height: 50px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin-left: 20px;
+  gap: 15px;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  display: block;
+}
+
+.nav-links .dropdown-taskbar {
+  display: none;
+  position: absolute;
+  background-color: black;
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+  z-index: 999;
+  min-width: 160px;
+}
+
+.nav-links li:hover .dropdown-taskbar {
+  display: block;
+}
+
+.dropdown-taskbar li a {
+  color: white;
+  padding: 8px 16px;
+}
+
+.nav-icons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-left: auto;
+}
+
+.account-dropdown {
+  position: relative;
+}
+
+.account-dropdown:hover .account-menu {
+  display: block;
+}
+
+.account-menu {
+  display: none;
+  position: absolute;
+  background: black;
+  right: 0;
+  top: 120%;
+  padding: 10px;
+  border: 1px solid #333;
+}
+
+.account-menu a {
+  display: block;
+  padding: 5px 10px;
+  color: white;
+  text-decoration: none;
+}
+
+/* ... các phần nhân vật... */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #111;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+.character-section {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.character-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.character-card {
+  background-color: white;
+  border: 2px solid #ccc;
+  padding: 15px 20px;
+  width: 200px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.character-card:hover {
+  transform: translateY(-5px);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #111;
+  color: white;
+  margin-top: 50px;
+}
